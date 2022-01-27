@@ -10,12 +10,12 @@ namespace matrixxx
 
 	class Matrix
 	{
-		public int V { get; }          // Нулевое значение
-		public int D { get; }          // Ширина ленты
-		public double[] Values { get; set; }    // Массив ненулевых значений
+		public int V { get; set; }          // Нулевое значение
+		public int D { get; set; }          // Ширина ленты
+		public List<double> Values { get; set; }    // Массив ненулевых значений
 		public static List<Matrix> Matrixes = new System.Collections.Generic.List<Matrix>();
 		
-        public Matrix(int V, int D, double[] Values)
+        public Matrix(int V, int D, List<double> Values)
         {
 			this.V = V;
 			this.D = D;

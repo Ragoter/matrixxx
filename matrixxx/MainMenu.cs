@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace matrixxx
 {
@@ -18,25 +19,26 @@ namespace matrixxx
 		}
 
 	
-
+		// Вывод окна "о программе"
         private void MenuHelpAbout_Click(object sender, EventArgs e)
         {
 			var About = new About();
 			About.Show();
         }
 
+		// Событие добавления новой вкладки с матрицей
         private void bAddNewTab_Click(object sender, EventArgs e)
         {
 
-			Matrix.Matrixes.Add(new Matrix(0, 0, null));
+			Matrix.Matrixes.Add(new Matrix(0, 0, new List<double>()));
 			
 			var page = new TabPage();
 			page.Text = $"Матрица{tabsControl.TabPages.Count}";
 
 			tabsControl.TabPages.Add(page);
-			page.Click += new System.EventHandler(this.MatrixTab_Click);
 		}
-
+		
+		// Событие удаления текущей вкладки
         private void bDelCurrentTab_Click(object sender, EventArgs e)
         {
 			if(tabsControl.SelectedIndex != 0) {
@@ -45,8 +47,46 @@ namespace matrixxx
 			}
 		}
 
-        private void MatrixTab_Click(object sender, EventArgs e)
+		// Событие обновления данных в структурах матриц при изменении значения ширины ленты на вкладке
+		private void tbMatrixWidth_Changed(object sender, EventArgs e)
         {
+			if (tabsControl.SelectedIndex != 0)
+			{
+				Matrix.Matrixes[tabsControl.SelectedIndex].D = Convert.ToInt32(tbMatrixLineWidth.Text);
+			}
+		}
+		// Событие обновления данных в структурах матриц при изменении ненулевых значений на вкладках
+		private void rtbMatrixValues_Changed(object sender, EventArgs e)
+		{
+			var i = 0;
+			if (tabsControl.SelectedIndex != 0)
+			{
+				double result;
+				
+				foreach(string Number in rtbMatrixValues.Lines)
+                {
+					if(Double.TryParse(Number, out result))
+                    {
+                        if (i >= Matrix.Matrixes[tabsControl.SelectedIndex].Values.Count)
+                        {
+							Matrix.Matrixes[tabsControl.SelectedIndex].Values.Add(result);
+						}
+                        else
+                        {
+							Matrix.Matrixes[tabsControl.SelectedIndex].Values[i] = result;
+						}
+						i++;
+					}		
+                }
+			}	// Отрезаем "хвост" если новый список короче старого
+			while(i < Matrix.Matrixes[tabsControl.SelectedIndex].Values.Count) {
+				Matrix.Matrixes[tabsControl.SelectedIndex].Values.RemoveAt(Matrix.Matrixes[tabsControl.SelectedIndex].Values.Count-1);
+			}
+		}
+		// Событие переключения вкладок
+		private void MatrixTab_Click(object sender, EventArgs e)
+        {
+			// Переносим элементы с прошлой вкладки матрицы на текущую
 			if(tabsControl.SelectedIndex != 0)
             {
 				tabsControl.SelectedTab.Controls.Add(lMatrixLineWidth);
@@ -55,7 +95,7 @@ namespace matrixxx
 				tabsControl.SelectedTab.Controls.Add(cbDisableEditing);
 				tabsControl.SelectedTab.Controls.Add(lListNonZeroElems);
 			}
-			
+			// Обновляем значения текущих элементов в соответствии с новой текущей матрицей
 
 			tbMatrixLineWidth.Text = Matrix.Matrixes[tabsControl.SelectedIndex].D.ToString();
 			
@@ -73,12 +113,11 @@ namespace matrixxx
 
 		}
 
+		// Событие "при появлении формы"
         private void MainMenu_Load(object sender, EventArgs e)
         {
-			double[] arr = { 1.4, 2.5, 3.22, 4.15, 5.06, 6.22, 7.1 };
-
-			Matrix.Matrixes.Add(new Matrix(0, 1, arr));
-			Matrix.Matrixes.Add(new Matrix(0, 1, arr));
+			Matrix.Matrixes.Add(new Matrix(0, 0, new List<double>()));
+			Matrix.Matrixes.Add(new Matrix(0, 1, new List<double> { 1.4, 2.5, 3.22, 4.15, 5.06, 6.22, 7.1 }));
 		}
     }
 }

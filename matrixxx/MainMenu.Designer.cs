@@ -529,7 +529,6 @@ namespace matrixxx
             this.MatrixTab.TabIndex = 0;
             this.MatrixTab.Text = "Матрица1";
             this.MatrixTab.UseVisualStyleBackColor = true;
-            this.tabsControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.MatrixTab_Click);
             // 
             // lMatrixLineWidth
             // 
@@ -546,6 +545,7 @@ namespace matrixxx
             this.tbMatrixLineWidth.Name = "tbMatrixLineWidth";
             this.tbMatrixLineWidth.Size = new System.Drawing.Size(100, 20);
             this.tbMatrixLineWidth.TabIndex = 19;
+            this.tbMatrixLineWidth.LostFocus += new System.EventHandler(this.tbMatrixWidth_Changed);
             // 
             // rtbMatrixValues
             // 
@@ -555,6 +555,7 @@ namespace matrixxx
             this.rtbMatrixValues.Size = new System.Drawing.Size(349, 271);
             this.rtbMatrixValues.TabIndex = 18;
             this.rtbMatrixValues.Text = "123.42\n123456.3\n591.014";
+            this.rtbMatrixValues.LostFocus += new System.EventHandler(this.rtbMatrixValues_Changed);
             // 
             // cbDisableEditing
             // 
@@ -629,6 +630,7 @@ namespace matrixxx
             this.tabsControl.SelectedIndex = 0;
             this.tabsControl.Size = new System.Drawing.Size(386, 427);
             this.tabsControl.TabIndex = 3;
+            this.tabsControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.MatrixTab_Click);
             // 
             // MainMenu
             // 
