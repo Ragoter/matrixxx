@@ -63,27 +63,24 @@ namespace matrixxx
             this.lSelectAloneMX = new System.Windows.Forms.Label();
             this.cbSelectAloneMX = new System.Windows.Forms.ComboBox();
             this.gbControlMXTabs = new System.Windows.Forms.GroupBox();
-            this.bAddNewTab = new System.Windows.Forms.Button();
             this.bDelCurrentTab = new System.Windows.Forms.Button();
+            this.bAddNewTab = new System.Windows.Forms.Button();
             this.bMXOutput = new System.Windows.Forms.Button();
             this.bSaveMX = new System.Windows.Forms.Button();
             this.bLoadMX = new System.Windows.Forms.Button();
             this.gbSaveLoadMX = new System.Windows.Forms.GroupBox();
             this.gbMXOutput = new System.Windows.Forms.GroupBox();
             this.cbWithPhysPlace = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabResult = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.lNoEvals = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.tabsControl = new System.Windows.Forms.TabControl();
             this.Menu.SuspendLayout();
             this.gbOpsWithTwoMX.SuspendLayout();
@@ -92,7 +89,6 @@ namespace matrixxx
             this.gbSaveLoadMX.SuspendLayout();
             this.gbMXOutput.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.tabResult.SuspendLayout();
             this.tabsControl.SuspendLayout();
             this.SuspendLayout();
@@ -189,13 +185,13 @@ namespace matrixxx
             // MenuHelpHelp
             // 
             this.MenuHelpHelp.Name = "MenuHelpHelp";
-            this.MenuHelpHelp.Size = new System.Drawing.Size(180, 22);
+            this.MenuHelpHelp.Size = new System.Drawing.Size(149, 22);
             this.MenuHelpHelp.Text = "Справка";
             // 
             // MenuHelpAbout
             // 
             this.MenuHelpAbout.Name = "MenuHelpAbout";
-            this.MenuHelpAbout.Size = new System.Drawing.Size(180, 22);
+            this.MenuHelpAbout.Size = new System.Drawing.Size(149, 22);
             this.MenuHelpAbout.Text = "О программе";
             this.MenuHelpAbout.Click += new System.EventHandler(this.MenuHelpAbout_Click);
             // 
@@ -210,7 +206,7 @@ namespace matrixxx
             this.gbOpsWithTwoMX.Controls.Add(this.rbMultAB);
             this.gbOpsWithTwoMX.Controls.Add(this.rbMinusAB);
             this.gbOpsWithTwoMX.Controls.Add(this.rbPlusAB);
-            this.gbOpsWithTwoMX.Location = new System.Drawing.Point(620, 39);
+            this.gbOpsWithTwoMX.Location = new System.Drawing.Point(637, 39);
             this.gbOpsWithTwoMX.Name = "gbOpsWithTwoMX";
             this.gbOpsWithTwoMX.Size = new System.Drawing.Size(221, 209);
             this.gbOpsWithTwoMX.TabIndex = 4;
@@ -318,7 +314,7 @@ namespace matrixxx
             this.gbOpsAloneMX.Controls.Add(this.lSelectAloneMX);
             this.gbOpsAloneMX.Controls.Add(this.cbSelectAloneMX);
             this.gbOpsAloneMX.Controls.Add(this.bEvalAloneMX);
-            this.gbOpsAloneMX.Location = new System.Drawing.Point(620, 257);
+            this.gbOpsAloneMX.Location = new System.Drawing.Point(637, 257);
             this.gbOpsAloneMX.Name = "gbOpsAloneMX";
             this.gbOpsAloneMX.Size = new System.Drawing.Size(221, 197);
             this.gbOpsAloneMX.TabIndex = 9;
@@ -428,8 +424,8 @@ namespace matrixxx
             // 
             // gbControlMXTabs
             // 
-            this.gbControlMXTabs.Controls.Add(this.bAddNewTab);
             this.gbControlMXTabs.Controls.Add(this.bDelCurrentTab);
+            this.gbControlMXTabs.Controls.Add(this.bAddNewTab);
             this.gbControlMXTabs.Location = new System.Drawing.Point(6, 49);
             this.gbControlMXTabs.Name = "gbControlMXTabs";
             this.gbControlMXTabs.Size = new System.Drawing.Size(230, 137);
@@ -437,23 +433,25 @@ namespace matrixxx
             this.gbControlMXTabs.TabStop = false;
             this.gbControlMXTabs.Text = "Управление вкладками с матрицами";
             // 
-            // bAddNewTab
-            // 
-            this.bAddNewTab.Location = new System.Drawing.Point(17, 77);
-            this.bAddNewTab.Name = "bAddNewTab";
-            this.bAddNewTab.Size = new System.Drawing.Size(194, 40);
-            this.bAddNewTab.TabIndex = 5;
-            this.bAddNewTab.Text = "Удалить выбранную вкладку";
-            this.bAddNewTab.UseVisualStyleBackColor = true;
-            // 
             // bDelCurrentTab
             // 
-            this.bDelCurrentTab.Location = new System.Drawing.Point(17, 24);
+            this.bDelCurrentTab.Location = new System.Drawing.Point(17, 77);
             this.bDelCurrentTab.Name = "bDelCurrentTab";
             this.bDelCurrentTab.Size = new System.Drawing.Size(194, 40);
-            this.bDelCurrentTab.TabIndex = 4;
-            this.bDelCurrentTab.Text = "Добавить новую вкладку";
+            this.bDelCurrentTab.TabIndex = 5;
+            this.bDelCurrentTab.Text = "Удалить выбранную вкладку";
             this.bDelCurrentTab.UseVisualStyleBackColor = true;
+            this.bDelCurrentTab.Click += new System.EventHandler(this.bDelCurrentTab_Click);
+            // 
+            // bAddNewTab
+            // 
+            this.bAddNewTab.Location = new System.Drawing.Point(17, 24);
+            this.bAddNewTab.Name = "bAddNewTab";
+            this.bAddNewTab.Size = new System.Drawing.Size(194, 40);
+            this.bAddNewTab.TabIndex = 4;
+            this.bAddNewTab.Text = "Добавить новую вкладку";
+            this.bAddNewTab.UseVisualStyleBackColor = true;
+            this.bAddNewTab.Click += new System.EventHandler(this.bAddNewTab_Click);
             // 
             // bMXOutput
             // 
@@ -487,7 +485,7 @@ namespace matrixxx
             this.gbSaveLoadMX.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gbSaveLoadMX.Controls.Add(this.bLoadMX);
             this.gbSaveLoadMX.Controls.Add(this.bSaveMX);
-            this.gbSaveLoadMX.Location = new System.Drawing.Point(6, 191);
+            this.gbSaveLoadMX.Location = new System.Drawing.Point(6, 192);
             this.gbSaveLoadMX.Name = "gbSaveLoadMX";
             this.gbSaveLoadMX.Size = new System.Drawing.Size(230, 138);
             this.gbSaveLoadMX.TabIndex = 11;
@@ -499,7 +497,7 @@ namespace matrixxx
             this.gbMXOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gbMXOutput.Controls.Add(this.bMXOutput);
             this.gbMXOutput.Controls.Add(this.cbWithPhysPlace);
-            this.gbMXOutput.Location = new System.Drawing.Point(6, 335);
+            this.gbMXOutput.Location = new System.Drawing.Point(6, 333);
             this.gbMXOutput.Name = "gbMXOutput";
             this.gbMXOutput.Size = new System.Drawing.Size(230, 117);
             this.gbMXOutput.TabIndex = 12;
@@ -516,16 +514,6 @@ namespace matrixxx
             this.cbWithPhysPlace.Text = "вывести с физ. расположением в ОП";
             this.cbWithPhysPlace.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(361, 399);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Матрица2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
@@ -537,19 +525,35 @@ namespace matrixxx
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(361, 399);
+            this.tabPage1.Size = new System.Drawing.Size(378, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Матрица1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // label9
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Список ненулевых элементов матрицы:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Ширина ленты:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(104, 24);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 19;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox2.Location = new System.Drawing.Point(6, 125);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(349, 271);
+            this.richTextBox2.TabIndex = 18;
+            this.richTextBox2.Text = "123.42\n123456.3\n591.014";
             // 
             // checkBox1
             // 
@@ -561,50 +565,14 @@ namespace matrixxx
             this.checkBox1.Text = "Запретить редактирование";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // richTextBox2
+            // label6
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox2.Location = new System.Drawing.Point(6, 125);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(349, 271);
-            this.richTextBox2.TabIndex = 18;
-            this.richTextBox2.Text = "123.42\n123456.3\n591.014";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(104, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Ширина ленты:";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.richTextBox1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(361, 399);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Вывод";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
-            this.richTextBox1.Size = new System.Drawing.Size(358, 396);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "Ни одна из матриц еще не выводилась.";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(210, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Список ненулевых элементов матрицы:";
             // 
             // tabResult
             // 
@@ -615,29 +583,9 @@ namespace matrixxx
             this.tabResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabResult.Location = new System.Drawing.Point(4, 22);
             this.tabResult.Name = "tabResult";
-            this.tabResult.Size = new System.Drawing.Size(361, 399);
+            this.tabResult.Size = new System.Drawing.Size(378, 401);
             this.tabResult.TabIndex = 2;
             this.tabResult.Text = "Результат";
-            // 
-            // button8
-            // 
-            this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(34, 344);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(275, 23);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Добавить результирующую матрицу к остальным";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(34, 373);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(275, 23);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Обновить значения старой матрицы текущими";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // lNoEvals
             // 
@@ -648,19 +596,37 @@ namespace matrixxx
             this.lNoEvals.TabIndex = 3;
             this.lNoEvals.Text = "Никаких вычислений еще не проводилось.";
             // 
+            // button9
+            // 
+            this.button9.Enabled = false;
+            this.button9.Location = new System.Drawing.Point(34, 363);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(275, 23);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Обновить значения старой матрицы текущими";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Enabled = false;
+            this.button8.Location = new System.Drawing.Point(34, 333);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(275, 23);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Добавить результирующую матрицу к остальным";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // tabsControl
             // 
             this.tabsControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabsControl.Controls.Add(this.tabResult);
-            this.tabsControl.Controls.Add(this.tabPage4);
             this.tabsControl.Controls.Add(this.tabPage1);
-            this.tabsControl.Controls.Add(this.tabPage2);
             this.tabsControl.Location = new System.Drawing.Point(245, 27);
             this.tabsControl.Name = "tabsControl";
             this.tabsControl.SelectedIndex = 0;
-            this.tabsControl.Size = new System.Drawing.Size(369, 425);
+            this.tabsControl.Size = new System.Drawing.Size(386, 427);
             this.tabsControl.TabIndex = 3;
             // 
             // MainMenu
@@ -668,7 +634,7 @@ namespace matrixxx
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(854, 472);
+            this.ClientSize = new System.Drawing.Size(854, 462);
             this.Controls.Add(this.gbMXOutput);
             this.Controls.Add(this.gbSaveLoadMX);
             this.Controls.Add(this.gbControlMXTabs);
@@ -693,7 +659,6 @@ namespace matrixxx
             this.gbMXOutput.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
             this.tabResult.ResumeLayout(false);
             this.tabResult.PerformLayout();
             this.tabsControl.ResumeLayout(false);
@@ -733,8 +698,8 @@ namespace matrixxx
 		private System.Windows.Forms.Button bSaveMX;
 		private System.Windows.Forms.Button bLoadMX;
 		private System.Windows.Forms.Button bMXOutput;
-		private System.Windows.Forms.Button bAddNewTab;
 		private System.Windows.Forms.Button bDelCurrentTab;
+		private System.Windows.Forms.Button bAddNewTab;
 		private System.Windows.Forms.TextBox tbMultNumber;
 		private System.Windows.Forms.RadioButton rbMultNumber;
 		private System.Windows.Forms.GroupBox gbSaveLoadMX;
@@ -746,15 +711,12 @@ namespace matrixxx
 		private System.Windows.Forms.ToolStripSeparator Strip2;
 		private System.Windows.Forms.ToolStripMenuItem MenuFileLastProjects;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabPage tabResult;
         private System.Windows.Forms.Label lNoEvals;
         private System.Windows.Forms.Button button9;

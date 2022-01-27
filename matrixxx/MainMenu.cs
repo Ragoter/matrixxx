@@ -27,5 +27,17 @@ namespace matrixxx
 			var About = new About();
 			About.Show();
         }
+
+        private void bAddNewTab_Click(object sender, EventArgs e)
+        {
+			tabsControl.TabPages.Add($"Матрица{tabsControl.TabPages.Count}");
+        }
+
+        private void bDelCurrentTab_Click(object sender, EventArgs e)
+        {
+			if(tabsControl.SelectedIndex != 0) {
+				tabsControl.TabPages.Remove(tabsControl.SelectedTab);
+			}
+		}
     }
 }
