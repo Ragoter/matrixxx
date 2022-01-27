@@ -71,12 +71,12 @@ namespace matrixxx
             this.gbSaveLoadMX = new System.Windows.Forms.GroupBox();
             this.gbMXOutput = new System.Windows.Forms.GroupBox();
             this.cbWithPhysPlace = new System.Windows.Forms.CheckBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.MatrixTab = new System.Windows.Forms.TabPage();
+            this.lMatrixLineWidth = new System.Windows.Forms.Label();
+            this.tbMatrixLineWidth = new System.Windows.Forms.TextBox();
+            this.rtbMatrixValues = new System.Windows.Forms.RichTextBox();
+            this.cbDisableEditing = new System.Windows.Forms.CheckBox();
+            this.lListNonZeroElems = new System.Windows.Forms.Label();
             this.tabResult = new System.Windows.Forms.TabPage();
             this.lNoEvals = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -88,7 +88,7 @@ namespace matrixxx
             this.gbControlMXTabs.SuspendLayout();
             this.gbSaveLoadMX.SuspendLayout();
             this.gbMXOutput.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.MatrixTab.SuspendLayout();
             this.tabResult.SuspendLayout();
             this.tabsControl.SuspendLayout();
             this.SuspendLayout();
@@ -514,65 +514,66 @@ namespace matrixxx
             this.cbWithPhysPlace.Text = "вывести с физ. расположением в ОП";
             this.cbWithPhysPlace.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // MatrixTab
             // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.richTextBox2);
-            this.tabPage1.Controls.Add(this.checkBox1);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(378, 401);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Матрица1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.MatrixTab.AutoScroll = true;
+            this.MatrixTab.Controls.Add(this.lMatrixLineWidth);
+            this.MatrixTab.Controls.Add(this.tbMatrixLineWidth);
+            this.MatrixTab.Controls.Add(this.rtbMatrixValues);
+            this.MatrixTab.Controls.Add(this.cbDisableEditing);
+            this.MatrixTab.Controls.Add(this.lListNonZeroElems);
+            this.MatrixTab.Location = new System.Drawing.Point(4, 22);
+            this.MatrixTab.Name = "MatrixTab";
+            this.MatrixTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MatrixTab.Size = new System.Drawing.Size(378, 401);
+            this.MatrixTab.TabIndex = 0;
+            this.MatrixTab.Text = "Матрица1";
+            this.MatrixTab.UseVisualStyleBackColor = true;
+            this.tabsControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.MatrixTab_Click);
             // 
-            // label9
+            // lMatrixLineWidth
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Ширина ленты:";
+            this.lMatrixLineWidth.AutoSize = true;
+            this.lMatrixLineWidth.Location = new System.Drawing.Point(15, 26);
+            this.lMatrixLineWidth.Name = "lMatrixLineWidth";
+            this.lMatrixLineWidth.Size = new System.Drawing.Size(83, 13);
+            this.lMatrixLineWidth.TabIndex = 20;
+            this.lMatrixLineWidth.Text = "Ширина ленты:";
             // 
-            // textBox3
+            // tbMatrixLineWidth
             // 
-            this.textBox3.Location = new System.Drawing.Point(104, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 19;
+            this.tbMatrixLineWidth.Location = new System.Drawing.Point(104, 24);
+            this.tbMatrixLineWidth.Name = "tbMatrixLineWidth";
+            this.tbMatrixLineWidth.Size = new System.Drawing.Size(100, 20);
+            this.tbMatrixLineWidth.TabIndex = 19;
             // 
-            // richTextBox2
+            // rtbMatrixValues
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox2.Location = new System.Drawing.Point(6, 125);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(349, 271);
-            this.richTextBox2.TabIndex = 18;
-            this.richTextBox2.Text = "123.42\n123456.3\n591.014";
+            this.rtbMatrixValues.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtbMatrixValues.Location = new System.Drawing.Point(6, 125);
+            this.rtbMatrixValues.Name = "rtbMatrixValues";
+            this.rtbMatrixValues.Size = new System.Drawing.Size(349, 271);
+            this.rtbMatrixValues.TabIndex = 18;
+            this.rtbMatrixValues.Text = "123.42\n123456.3\n591.014";
             // 
-            // checkBox1
+            // cbDisableEditing
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(28, 100);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(165, 17);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Запретить редактирование";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbDisableEditing.AutoSize = true;
+            this.cbDisableEditing.Location = new System.Drawing.Point(28, 100);
+            this.cbDisableEditing.Name = "cbDisableEditing";
+            this.cbDisableEditing.Size = new System.Drawing.Size(165, 17);
+            this.cbDisableEditing.TabIndex = 17;
+            this.cbDisableEditing.Text = "Запретить редактирование";
+            this.cbDisableEditing.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lListNonZeroElems
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Список ненулевых элементов матрицы:";
+            this.lListNonZeroElems.AutoSize = true;
+            this.lListNonZeroElems.Location = new System.Drawing.Point(15, 73);
+            this.lListNonZeroElems.Name = "lListNonZeroElems";
+            this.lListNonZeroElems.Size = new System.Drawing.Size(210, 13);
+            this.lListNonZeroElems.TabIndex = 16;
+            this.lListNonZeroElems.Text = "Список ненулевых элементов матрицы:";
             // 
             // tabResult
             // 
@@ -622,7 +623,7 @@ namespace matrixxx
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabsControl.Controls.Add(this.tabResult);
-            this.tabsControl.Controls.Add(this.tabPage1);
+            this.tabsControl.Controls.Add(this.MatrixTab);
             this.tabsControl.Location = new System.Drawing.Point(245, 27);
             this.tabsControl.Name = "tabsControl";
             this.tabsControl.SelectedIndex = 0;
@@ -646,7 +647,7 @@ namespace matrixxx
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "matrixxx";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.gbOpsWithTwoMX.ResumeLayout(false);
@@ -657,8 +658,8 @@ namespace matrixxx
             this.gbSaveLoadMX.ResumeLayout(false);
             this.gbMXOutput.ResumeLayout(false);
             this.gbMXOutput.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.MatrixTab.ResumeLayout(false);
+            this.MatrixTab.PerformLayout();
             this.tabResult.ResumeLayout(false);
             this.tabResult.PerformLayout();
             this.tabsControl.ResumeLayout(false);
@@ -711,12 +712,12 @@ namespace matrixxx
 		private System.Windows.Forms.ToolStripSeparator Strip2;
 		private System.Windows.Forms.ToolStripMenuItem MenuFileLastProjects;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage MatrixTab;
+        private System.Windows.Forms.Label lMatrixLineWidth;
+        private System.Windows.Forms.TextBox tbMatrixLineWidth;
+        private System.Windows.Forms.RichTextBox rtbMatrixValues;
+        private System.Windows.Forms.CheckBox cbDisableEditing;
+        private System.Windows.Forms.Label lListNonZeroElems;
         private System.Windows.Forms.TabPage tabResult;
         private System.Windows.Forms.Label lNoEvals;
         private System.Windows.Forms.Button button9;
