@@ -119,5 +119,37 @@ namespace matrixxx
 			Matrix.Matrixes.Add(new Matrix(0, 0, new List<double>()));
 			Matrix.Matrixes.Add(new Matrix(0, 1, new List<double> { 1.4, 2.5, 3.22, 4.15, 5.06, 6.22, 7.1 }));
 		}
+
+		// Событие сохранения текущей матрицы
+		private void bSaveMX_Click(object sender, EventArgs e)
+		{
+			// Создаем диалог сохранения файла
+			var saveFile = new SaveFileDialog();
+			saveFile.FileName = tabsControl.SelectedTab.Text;
+			saveFile.InitialDirectory = AppContext.BaseDirectory;           // Начальный каталог - каталог с программой
+			saveFile.Filter = "matrixxx файл|*.mtx|Текстовый файл|*.txt";
+			saveFile.Title = $"Сохранить матрицу \"{tabsControl.SelectedTab.Text}\"";	
+
+			if (saveFile.ShowDialog() == DialogResult.OK && saveFile.FileName != "")
+			{
+				//Если файл сущетсвует, то удаляем его
+				if (System.IO.File.Exists(saveFile.FileName))
+				{
+					System.IO.File.Delete(saveFile.FileName);
+				}
+
+				// Выписываем элементы текущей матрицы
+				var D = Matrix.Matrixes[tabsControl.SelectedIndex].D.ToString();
+				var V = Matrix.Matrixes[tabsControl.SelectedIndex].V.ToString();
+				var Values = String.Join("; ", Matrix.Matrixes[tabsControl.SelectedIndex].Values);
+
+				// Создаем файл матрицы и записываем туда информацию
+				var fs = System.IO.File.Create(saveFile.FileName);
+				byte[] info = new UTF8Encoding(true).GetBytes($"{D}\n{V}\n{Values}");
+
+				fs.Write(info, 0, info.Length);
+				fs.Close();
+			}
+		}
     }
 }

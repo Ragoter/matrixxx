@@ -470,6 +470,7 @@ namespace matrixxx
             this.bSaveMX.TabIndex = 1;
             this.bSaveMX.Text = "Сохранить выбранную матрицу как...";
             this.bSaveMX.UseVisualStyleBackColor = true;
+            this.bSaveMX.Click += new System.EventHandler(this.bSaveMX_Click);
             // 
             // bLoadMX
             // 
